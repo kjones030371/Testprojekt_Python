@@ -13,8 +13,10 @@ def do_print(match, numbers, lotto_numbers):
         print("Du hast im Lotto " + str(match) + " richtige Zahlen")
     numbers.sort()
     lotto_numbers.sort()
-    print("Dein Tippschein:  " + str(numbers))
-    print("Die Gewinnzahlen: " + str(lotto_numbers))
+    print("Dein Tippschein:", end= "\t")
+    print(str(numbers))
+    print("Die Gewinnzahlen:", end='\t')
+    print(str(lotto_numbers))
 
 #  do_diff: Vergleicht die Lottozahlen mit dem Tippschein des Users
 def do_diff(numbers, lotto_numbers):
