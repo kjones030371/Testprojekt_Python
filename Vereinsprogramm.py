@@ -21,8 +21,14 @@ def sortierte_liste(vereine):
 
 def loesche_verein(vereine):
     while True:
-        index = int(input("Gib den Index des zu löschenden Verein an: "))
-        if index < len(vereine):
+        eingabe = input("Gib den Index des zu löschenden Verein an: ")
+        if eingabe == '':
+            print("Eingabe abgebrochen")
+            break
+        elif len(vereine) < 1:
+            print("Es gibt keine Vereine mehr")
+            break
+        elif int(eingabe) < len(vereine):
             vereine.pop(index)
         else:
             print("Diesen Index gibt es nicht")
@@ -31,7 +37,9 @@ def loesche_verein(vereine):
 
 
 vereine = neue_vereine(vereine)
+vereine_bereinigt = set(vereine)
 sortierte_liste(vereine)
 loesche_verein(vereine)
+print(vereine_bereinigt)
 sortierte_liste(vereine)
 
